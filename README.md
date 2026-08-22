@@ -60,3 +60,18 @@ The project uses security groups based on the organization's departments to orga
 Users were manually assigned to groups based on their simulated department. Group-based access management was chosen to allow access and permissions to be managed wholly rather than individually.
 
 ## RBAC (Role-Based Access Control)
+Role-Based Access Control
+
+The project uses Microsoft Entra administrative roles to demonstrate differentiated administrative privileges.
+
+| User              | Job Title             | Entra Role             |
+| ----------------- | --------------------- | ---------------------- |
+| Alexa Morgan      | IT Administrator      | User Administrator     |
+| Jordan Leigh      | IT Support Specialist | Helpdesk Administrator |
+| Other employees   | Various               | None                   |
+
+Alexa Morgan was assigned the User Administrator role because her responsibilities require broader identity-management capabilities. Jordan Leigh was assigned the Helpdesk Administrator role to provide more limited support-related administrative capabilities.
+
+The remaining employees were not assigned Entra administrative roles because their job responsibilities do not require identity administration privileges.
+
+This design demonstrates the principle of least privilege by limiting administrative access based on job responsibilities.
