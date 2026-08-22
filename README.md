@@ -95,3 +95,56 @@ A Conditional Access policy was designed to require MFA for privileged administr
 
 ## Identity Lifecycle Management
 
+**Identity Lifecycle Management**
+
+The project demonstrates the Joiner -> Mover -> Leaver identity lifecycle model.
+
+**Joiner**
+
+New employees receive:
+
+- An Entra identity
+- Department information
+- Appropriate group membership
+- Required access based on their job responsibilities
+
+**Mover**
+
+Scenario: Rex Anderson transferred from Sales to HR.
+
+Actions performed:
+
+- Updated department from Sales to HR
+- Updated job title to HR Specialist
+- Removed SG-Sales membership
+- Added SG-HR membership
+- Reviewed access to prevent unnecessary privilege retention
+
+**Leaver**
+
+Scenario: Emmanuel David left Southstars Retail.
+
+Actions performed:
+
+- Disabled the Entra account
+- Removed SG-HR membership
+- Reviewed administrative role assignments
+- Confirmed the account no longer had active organizational access
+
+These scenarios demonstrate the importance of reviewing and modifying access when an employee's organizational status changes. Removing outdated access helps prevent privilege creep and reduces the risk of unauthorized access.
+
+## Lessons Learned
+
+This project provided hands-on experience with foundational IAM concepts using Microsoft Entra ID. I gained practical experience managing users and groups, assigning administrative roles, applying least-privilege principles, and handling identity lifecycle events.
+
+The project also demonstrated the difference between implementing an identity control and designing one. Several advanced Entra capabilities required licensing beyond the Free edition, requiring me to identify those limitations and use Microsoft's training environments to gain additional hands-on experience.
+
+The lifecycle exercises reinforced the importance of reviewing access when users change roles and promptly removing access when employees leave an organization.
+
+## Project Limitations
+
+This project was conducted using Microsoft Entra ID Free. Some advanced identity security and access-management capabilities require Microsoft Entra ID Premium licensing.
+
+Conditional Access and full SSPR functionality were therefore not implemented directly in the project tenant. These capabilities were studied through Microsoft Learn and practiced through Microsoft's Applied Skills assessment environment where applicable.
+
+The organization and employee identities used in this project are entirely fictional.
