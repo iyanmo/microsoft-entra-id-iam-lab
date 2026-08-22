@@ -75,3 +75,23 @@ Alexa Morgan was assigned the User Administrator role because her responsibiliti
 The remaining employees were not assigned Entra administrative roles because their job responsibilities do not require identity administration privileges.
 
 This design demonstrates the principle of least privilege by limiting administrative access based on job responsibilities.
+
+## Authentication & Security
+### Security Defaults
+
+Security Defaults were enabled in the project tenant. The configuration provides baseline identity protection and MFA requirements within the capabilities of the Microsoft Entra ID Free edition.
+
+### Authentication Methods
+
+Available authentication methods were reviewed in the Entra admin center, including methods such as Microsoft Authenticator, SMS, and voice-based authentication.
+
+### SSPR
+
+Self-Service Password Reset was studied through Microsoft Learn and the Applied Skills assessment. Full SSPR password-reset functionality was not implemented in the project tenant due to licensing limitations.
+
+### Conditional Access
+
+A Conditional Access policy was designed to require MFA for privileged administrative accounts. This policy was not implemented in the project tenant because Conditional Access requires Microsoft Entra ID Premium licensing. Conditional Access functionality was instead practiced through Microsoft's Applied Skills assessment environment.
+
+## Identity Lifecycle Management
+
