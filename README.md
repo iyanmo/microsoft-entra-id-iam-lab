@@ -47,6 +47,10 @@ The project environment was implemented with Microsoft Entra ID and reinforced w
 
 Eight employee identities were created in the Entra tenant to represent a portion of the organization's identity environment.
 
+<img src="screenshots/users.png" alt="Users Screenshot" width="500">
+
+<img src="screenshots/users-profile.png" alt="Users Profile Screenshot" width="500">
+
 ## Identity & Group Management
 The project uses security groups based on the organization's departments to organize users and simplify access management.
 
@@ -57,7 +61,11 @@ The project uses security groups based on the organization's departments to orga
 | SG-Finance | Finance department access |
 | SG-Sales   | Sales department access   |
 
+<img src="screenshots/groups.png" alt="Group Screenshot" width="500">
+
 Users were manually assigned to groups based on their simulated department. Group-based access management was chosen to allow access and permissions to be managed wholly rather than individually.
+
+<img src="screenshots/group-membership.png" alt="Group Membership Screenshot" width="500">
 
 ## RBAC (Role-Based Access Control)
 Role-Based Access Control
@@ -72,6 +80,10 @@ The project uses Microsoft Entra administrative roles to demonstrate differentia
 
 Alexa Morgan was assigned the User Administrator role because her responsibilities require broader identity-management capabilities. Jordan Leigh was assigned the Helpdesk Administrator role to provide more limited support-related administrative capabilities.
 
+<img src="screenshots/rbac-alexa.png" alt="RBAC-Alexa Screenshot" width="500">
+
+<img src="screenshots/rbac-jordan.png" alt="RBAC-Jordan Screenshot" width="500">
+
 The remaining employees were not assigned Entra administrative roles because their job responsibilities do not require identity administration privileges.
 
 This design demonstrates the principle of least privilege by limiting administrative access based on job responsibilities.
@@ -81,9 +93,13 @@ This design demonstrates the principle of least privilege by limiting administra
 
 Security Defaults were enabled in the project tenant. The configuration provides baseline identity protection and MFA requirements within the capabilities of the Microsoft Entra ID Free edition.
 
+<img src="screenshots/security-defaults.png" alt="Security Defaults Screenshot" width="500">
+
 ### Authentication Methods
 
 Available authentication methods were reviewed in the Entra admin center, including methods such as Microsoft Authenticator, SMS, and voice-based authentication.
+
+<img src="screenshots/authentication-methods.png" alt="Authentication Methods Screenshot" width="500">
 
 ### SSPR
 
@@ -107,6 +123,8 @@ This policy was not implemented in the project tenant because Conditional Access
 
 The project demonstrates the Joiner -> Mover -> Leaver identity lifecycle model.
 
+<img src="diagrams/identity-lifecycle.png" alt="Identity Lifecycle Diagram" width="500">
+
 **Joiner**
 
 New employees receive:
@@ -128,6 +146,10 @@ Actions performed:
 - Added SG-HR membership
 - Reviewed access to prevent unnecessary privilege retention
 
+<img src="screenshots/department-transfer-profile.png" alt="Department Transfer Profile Screenshot" width="500">
+
+<img src="screenshots/department-transfer-groups.png" alt="Department Transfer Groups Screenshot" width="500">
+
 **Leaver**
 
 Scenario: Emmanuel David left Southstars Retail.
@@ -138,6 +160,10 @@ Actions performed:
 - Removed SG-HR membership
 - Reviewed administrative role assignments
 - Confirmed the account no longer had active organizational access
+
+<img src="screenshots/account-offboarding.png" alt="Account Offboarding Screenshot" width="500">
+
+<img src="screenshots/account-offboarding-groups.png" alt="Account Offboarding Groups Screenshot" width="500">
 
 These scenarios demonstrate the importance of reviewing and modifying access when an employee's organizational status changes. Removing outdated access helps prevent privilege creep and reduces the risk of unauthorized access.
 
