@@ -91,7 +91,15 @@ Self-Service Password Reset was studied through Microsoft Learn and the Applied 
 
 ### Conditional Access
 
-A Conditional Access policy was designed to require MFA for privileged administrative accounts. This policy was not implemented in the project tenant because Conditional Access requires Microsoft Entra ID Premium licensing. Conditional Access functionality was instead practiced through Microsoft's Applied Skills assessment environment.
+A Conditional Access policy was designed to require MFA for privileged administrative accounts:
+
+Policy: Require MFA for privileged users
+
+Purpose: Protect accounts with elevated Entra permissions.
+
+Reasoning: Alexa Morgan has the User Administrator role, meaning compromise of her account could allow an attacker to modify identities in Southstars Retail's tenant. Requiring MFA provides an additional layer of protection against credential compromise.
+
+This policy was not implemented in the project tenant because Conditional Access requires Microsoft Entra ID Premium licensing. Conditional Access functionality was instead practiced through Microsoft's Applied Skills assessment environment.
 
 ## Identity Lifecycle Management
 
